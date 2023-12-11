@@ -3,13 +3,16 @@ import { Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
 import { ShoppingCart } from '@mui/icons-material';
 import  styled  from '@emotion/styled';
 import IconButton from '@mui/material/IconButton';
+import { IoIosStar } from "react-icons/io";
 
 const StyledCard = styled(Card)`
   margin: 5px 20px 50px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.085);
   transition: transform 0.3s ease-in-out;
-  width:230px;
+  width:300px;
+  height: 350px;
   font-family: Poppins;
+  position: relative;
   
   &:hover {
     transform: scale(1.02);
@@ -28,7 +31,7 @@ const MediaBox=styled(Box)`
   height: 140px;
 `;
 const MediaContainer=styled(Box)`
-  width: 100%;
+  width: '100%';
   display: flex;
   justify-content: center;
   padding: 10px 0;
@@ -59,16 +62,19 @@ const ProductCard = ({ product }) => {
       
       <StyledCardContent >
         <Typography variant="h6" sx={{fontFamily: 'Poppins'}}>{title}</Typography>
-        <Typography variant="body2" color="textSecondary" sx={{fontFamily: 'Poppins',fontSize:'11px',letterSpacing:'1.2px',wordSpacing:'3px'}} component="p">
+        <Typography variant="body2" color="textSecondary" sx={{fontFamily: 'Poppins',fontSize:'11px',letterSpacing:'1px',wordSpacing:'2px',fontStyle:'italic',color:'black',fontWeight:'400'}} component="p">
             {description}
         </Typography>
-          <Box sx={{width:'100%',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                <IconButton size="large">
-                  <ShoppingCart sx={{color:'orangered'}} />
-                </IconButton>
-              <Typography variant="p">$100</Typography>
-          </Box>
+        <Box>
+          <Typography sx={{display:'flex',alignItems:'center',fontFamily: 'Poppins',fontSize:12,position:'absolute',bottom:45}}>Ratting : 4.5 <IoIosStar style={{color:'orangered',marginLeft:'3px',fontSize:'13px'}}/></Typography>
+        </Box>
       </StyledCardContent>
+      <Box sx={{width:'100%',display:'flex',justifyContent:'space-between',alignItems:'center',position:'absolute',bottom:0}}>
+                <IconButton size="large">
+                  <ShoppingCart sx={{color:'black'}} />
+                </IconButton>
+              <Typography variant="p" sx={{mr:3}}>$100</Typography>
+          </Box>
     </StyledCard>
   );
 };
