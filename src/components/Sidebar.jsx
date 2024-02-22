@@ -38,7 +38,7 @@ const Sidebar = () => {
       setMobileOpen(!mobileOpen);
     };
     const drawer = (
-        <Box sx={{height: { sm: `calc(100vh - 100px)` },overflowY:'scroll',pb:5,fontFamily: 'Poppins'}}>
+        <Box sx={{height: { sm: `calc(100vh - 100px)` },overflowY:'scroll',pb:5}}>
         <Divider>
             <Typography variant="h6" noWrap component="div">
                         Brand
