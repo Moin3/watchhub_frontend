@@ -28,7 +28,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Product 1",
+    name: "Fossil Smartwatches",
     price: 20,
     imageUrl:
       "https://s.turbifycdn.com/aah/movadobaby/rolex-sea-dweller-gold-oystersteel-men-s-watch-m126603-0001-61.jpg",
