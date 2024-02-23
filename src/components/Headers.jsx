@@ -250,7 +250,7 @@ const Header = () => {
                         fontFamily: "Poppins",
                         fontWeight: 400,
                         textTransform: "none",
-                        fontSize: "14px",
+                        fontSize: { xs: "11px", sm: "14px" },
                       }}
                     >
                       {page.label}

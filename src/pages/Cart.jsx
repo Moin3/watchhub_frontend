@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  AppBar,
   Toolbar,
   Typography,
   Container,
@@ -12,9 +11,6 @@ import {
   Button,
   List,
   ListItem,
-  ListItemText,
-  ListItemSecondaryAction,
-  TextField,
   Box,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -32,14 +28,14 @@ const products = [
   },
   {
     id: 2,
-    name: "Product 2",
+    name: "Product 1",
     price: 20,
     imageUrl:
       "https://s.turbifycdn.com/aah/movadobaby/rolex-sea-dweller-gold-oystersteel-men-s-watch-m126603-0001-61.jpg",
   },
   {
     id: 3,
-    name: "Product 3",
+    name: "Product 1",
     price: 30,
     imageUrl:
       "https://s.turbifycdn.com/aah/movadobaby/rolex-sea-dweller-gold-oystersteel-men-s-watch-m126603-0001-62.jpg",
@@ -103,7 +99,9 @@ const Cart = () => {
                       alt={item.name}
                       sx={{ width: 150, height: 150, objectFit: "contain" }}
                     />
-                    <CardContent sx={{ flexGrow: 1, position: "relative" }}>
+                    <CardContent
+                      sx={{ flexGrow: 1, position: "relative", pr: 1 }}
+                    >
                       <Box
                         sx={{
                           display: "flex",
@@ -116,8 +114,9 @@ const Cart = () => {
                         </Typography>
                         <Typography
                           sx={{
-                            fontSize: { xs: "12px", sm: "15px" },
-                            fontWeight: "550",
+                            fontSize: { xs: "10px", sm: "15px" },
+                            fontWeight: "500",
+                            pr: 4,
                           }}
                           variant="body1"
                         >
@@ -127,7 +126,7 @@ const Cart = () => {
                       <Typography
                         sx={{
                           width: { xs: 200, sm: 330 },
-                          fontSize: { xs: "11.5px", sm: "15px" },
+                          fontSize: { xs: "10px", sm: "15px" },
                           fontStyle: "italic",
                         }}
                       >
@@ -141,7 +140,7 @@ const Cart = () => {
                           alignItems: "center",
                           position: "absolute",
                           bottom: 3,
-                          width: { xs: "90%", sm: "95%" },
+                          width: { xs: "80%", sm: "95%" },
                         }}
                       >
                         <Box sx={{ display: "flex", alignItems: "center" }}>
