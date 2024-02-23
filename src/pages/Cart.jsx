@@ -107,6 +107,7 @@ const Cart = () => {
                           display: "flex",
                           justifyContent: "space-between",
                           alignItems: "center",
+                          flexWrap: "wrap",
                         }}
                       >
                         <Typography sx={{ fontWeight: "bold" }} variant="h6">
@@ -115,7 +116,7 @@ const Cart = () => {
                         <Typography
                           sx={{
                             fontSize: { xs: "10px", sm: "15px" },
-                            fontWeight: "500",
+                            fontWeight: "600",
                             pr: 4,
                           }}
                           variant="body1"
@@ -140,7 +141,7 @@ const Cart = () => {
                           alignItems: "center",
                           position: "absolute",
                           bottom: 3,
-                          width: { xs: "80%", sm: "95%" },
+                          width: { xs: "85%", sm: "95%" },
                         }}
                       >
                         <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -161,7 +162,9 @@ const Cart = () => {
                           inputProps={{ min: 1 }}
                         /> */}
 
-                          <Box sx={{ px: 2 }}>{item.quantity}</Box>
+                          <Box sx={{ px: { xs: 1, sm: 2 } }}>
+                            {item.quantity}
+                          </Box>
 
                           <IconButton
                             onClick={() =>
@@ -185,7 +188,7 @@ const Cart = () => {
 
           {/* Shoping cart Buttons */}
           <Grid item xs={12}>
-            <Typography variant="h6" align="right">
+            <Typography sx={{ fontWeight: 600 }} variant="h6" align="right">
               Total Price: ${getTotalPrice()}
             </Typography>
             <Button
