@@ -125,7 +125,7 @@ const Cart = () => {
                       </Box>
                       <Typography
                         sx={{
-                          width: { xs: 200, sm: 330 },
+                          width: { xs: 185, sm: 330 },
                           fontSize: { xs: "10px", sm: "15px" },
                           fontStyle: "italic",
                         }}
