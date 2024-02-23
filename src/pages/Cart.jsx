@@ -107,7 +107,7 @@ const Cart = () => {
                           display: "flex",
                           justifyContent: "space-between",
                           alignItems: "center",
-                          flexWrap: "wrap",
+                          flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" },
                         }}
                       >
                         <Typography sx={{ fontWeight: "bold" }} variant="h6">
