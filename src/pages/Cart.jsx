@@ -106,13 +106,11 @@ const Cart = () => {
                         sx={{
                           display: "flex",
                           justifyContent: "space-between",
-                          alignItems: "center",
+                          alignItems: "flex-start",
                           flexDirection: {
                             xs: "column",
-                            sm: "column",
-                            md: "row",
+                            sm: "row",
                           },
-                          flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" },
                         }}
                       >
                         <Typography
