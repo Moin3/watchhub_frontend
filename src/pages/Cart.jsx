@@ -107,6 +107,11 @@ const Cart = () => {
                           display: "flex",
                           justifyContent: "space-between",
                           alignItems: "center",
+                          flexDirection: {
+                            xs: "column",
+                            sm: "column",
+                            md: "row",
+                          },
                           flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" },
                         }}
                       >
