@@ -110,7 +110,13 @@ const Cart = () => {
                           flexWrap: { xs: "wrap", sm: "wrap", md: "nowrap" },
                         }}
                       >
-                        <Typography sx={{ fontWeight: "bold" }} variant="h6">
+                        <Typography
+                          sx={{
+                            fontWeight: "bold",
+                            fontSize: { xs: "12px", sm: "20px", md: "25px" },
+                          }}
+                          variant="h6"
+                        >
                           {item.name}
                         </Typography>
                         <Typography
