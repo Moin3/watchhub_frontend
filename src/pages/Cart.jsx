@@ -202,6 +202,8 @@ const Cart = () => {
             </Typography>
             <Button
               variant="contained"
+              component={Link}
+              to="/checkout"
               color="primary"
               sx={{ float: "right", marginTop: 2 }}
             >

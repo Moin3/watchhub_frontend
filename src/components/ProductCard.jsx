@@ -4,6 +4,7 @@ import { ShoppingCart } from '@mui/icons-material';
 import  styled  from '@emotion/styled';
 import IconButton from '@mui/material/IconButton';
 import { IoIosStar } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const StyledCard = styled(Card)`
   margin: 5px 20px 50px 20px;
@@ -48,18 +49,20 @@ const ProductCard = ({ product }) => {
 
 
   return (
-    <StyledCard>
+      <StyledCard>
+
       <MediaContainer>
-        <MediaBox>
-          <StyledCardMedia
-            component="img"
-            alt={title}
-            image={imageUrl}
-            title={title}
-          />
-        </MediaBox>
+      <Link to="/single-product-page">
+          <MediaBox>
+            <StyledCardMedia
+              component="img"
+              alt={title}
+              image={imageUrl}
+              title={title}
+            />
+          </MediaBox>
+      </Link>
       </MediaContainer>
-      
       <StyledCardContent >
         <Typography variant="h6" sx={{fontFamily: 'Poppins'}}>{title}</Typography>
         <Typography variant="body2" color="textSecondary" sx={{fontFamily: 'Poppins',fontSize:'11px',letterSpacing:'1px',wordSpacing:'2px',fontStyle:'italic',color:'black',fontWeight:'400'}} component="p">
@@ -70,12 +73,12 @@ const ProductCard = ({ product }) => {
         </Box>
       </StyledCardContent>
       <Box sx={{width:'100%',display:'flex',justifyContent:'space-between',alignItems:'center',position:'absolute',bottom:0}}>
-                <IconButton size="large">
-                  <ShoppingCart sx={{color:'black'}} />
-                </IconButton>
-              <Typography variant="p" sx={{mr:3}}>$100</Typography>
-          </Box>
-    </StyledCard>
+        <IconButton size="large">
+          <ShoppingCart sx={{color:'black'}} />
+        </IconButton>
+        <Typography variant="p" sx={{mr:3}}>$100</Typography>
+      </Box>
+      </StyledCard>
   );
 };
 
